@@ -11,7 +11,5 @@ namespace Task_1
 
         public ExcelentPupil(string name)
             : base("excelent", name) { }
-
-
     }
 }

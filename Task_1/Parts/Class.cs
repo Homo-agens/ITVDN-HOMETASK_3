@@ -9,18 +9,18 @@ namespace Task_1
         Pupil[] pupils = new Pupil[4];
 
         //почему нельзя вставить new GoodPupil() в значения по умолчанию?
-        public Class(Pupil one, Pupil two, Pupil three = null, Pupil four = null)
+        public Class(Pupil first, Pupil second, Pupil third= null, Pupil fourth = null)
         {
-            this.pupils[0] = one;
-            this.pupils[1] = two;
-            if (three == null)
+            this.pupils[0] = first;
+            this.pupils[1] = second;
+            if (third == null)
                 this.pupils[2] = GeneratePuple();
             else
-                this.pupils[2] = three;
-            if (four == null)
+                this.pupils[2] = third;
+            if (fourth == null)
                 this.pupils[3] = GeneratePuple();
             else
-                this.pupils[3] = four;
+                this.pupils[3] = fourth;
         }
 
         /*
@@ -48,13 +48,12 @@ namespace Task_1
 
         public void Show(string c)
         {
-
             switch (c)
             {
                 case "study":
                     foreach (Pupil p in pupils)
                     {
-                        p.Present();
+                        p.PresentStudent();
                         p.Study();
                         Console.WriteLine(new string('_', 25));
                     }
@@ -62,7 +61,7 @@ namespace Task_1
                 case "read":
                     foreach (Pupil p in pupils)
                     {
-                        p.Present();
+                        p.PresentStudent();
                         p.Read();
                         Console.WriteLine(new string('_', 25));
                     }
@@ -70,7 +69,7 @@ namespace Task_1
                 case "write":
                     foreach (Pupil p in pupils)
                     {
-                        p.Present();
+                        p.PresentStudent();
                         p.Write();
                         Console.WriteLine(new string('_', 25));
                     }
@@ -78,7 +77,7 @@ namespace Task_1
                 case "relax":
                     foreach (Pupil p in pupils)
                     {
-                        p.Present();
+                        p.PresentStudent();
                         p.Relax();
                         Console.WriteLine(new string('_', 25));
                     }
@@ -86,13 +85,14 @@ namespace Task_1
             }
         }
 
-        //public void ShowStudy()
-        //{
-        //    foreach (Pupil p in pupils)
-        //    {
-        //        p.Study();
-        //    }
-        //}
-
+        /*  Another implementation of "ShowMethod"
+        public void ShowStudy()
+        {
+            foreach (Pupil p in pupils)
+            {
+                p.Study();
+            }
+        }
+        */
     }
 }

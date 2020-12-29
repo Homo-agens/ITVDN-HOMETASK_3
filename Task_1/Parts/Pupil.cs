@@ -21,8 +21,7 @@ namespace Task_1
             set => studentName = value;
         }
 
-        #region Ctors
-
+        
         public Pupil(string status, string name = "indefinite student")
         {
             StudentState = status;
@@ -38,9 +37,9 @@ namespace Task_1
         public Pupil(string name)
             : this(name, "indefinite student") { }
         */
-        #endregion
+        
 
-        public void Present()
+        public void PresentStudent()
         {
             Console.WriteLine($"Student name: {StudentName}, student achivement: {studentState};");
 

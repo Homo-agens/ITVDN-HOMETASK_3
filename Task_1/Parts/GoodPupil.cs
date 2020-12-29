@@ -11,7 +11,5 @@ namespace Task_1
 
         public GoodPupil(string name)
             : base("good", name) { }
-
-
     }
 }

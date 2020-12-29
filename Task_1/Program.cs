@@ -6,8 +6,8 @@ namespace Task_1
     {
         static void Main(string[] args)
         {
-            Class a = new Class(new BadPupil("igor"), new ExcelentPupil());
-            a.Show("study");
+            Class class1 = new Class(new BadPupil("igor"), new ExcelentPupil());
+            class1.Show("study");
         }
     }
 }
