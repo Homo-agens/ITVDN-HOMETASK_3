@@ -6,20 +6,8 @@ namespace Task_1
 {
     abstract class Pupil
     {
-        private string studentState;
-        private string studentName;
-
-        public string StudentState
-        {
-            get => studentState;
-            set => studentState = value;
-        }
-
-        public string StudentName
-        {
-            get => studentName;
-            set => studentName = value;
-        }
+    public string StudentState {get;set}
+    public string StudentName {get;set;}
 
         
         public Pupil(string status, string name = "indefinite student")
@@ -27,16 +15,6 @@ namespace Task_1
             StudentState = status;
             StudentName = name;
         }
-
-        /* or:
-        public Pupil(string status, string name)
-        {
-            StudentState = status;
-            StudentName = name;
-        }
-        public Pupil(string name)
-            : this(name, "indefinite student") { }
-        */
         
 
         public void PresentStudent()

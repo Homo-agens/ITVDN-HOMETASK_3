@@ -6,9 +6,8 @@ namespace Task_1
 {
     class Class
     {
-        Pupil[] pupils = new Pupil[4];
+        Pupil[] _pupils = new Pupil[4];
 
-        //почему нельзя вставить new GoodPupil() в значения по умолчанию?
         public Class(Pupil first, Pupil second, Pupil third= null, Pupil fourth = null)
         {
             this.pupils[0] = first;
@@ -23,14 +22,6 @@ namespace Task_1
                 this.pupils[3] = fourth;
         }
 
-        /*
-        public Class(Pupil one, Pupil two, Pupil three)
-            :this(one, two, three, new GoodPupil()) {}
-
-        public Class(Pupil one, Pupil two)
-            : this(one, two, new GoodPupil(), new GoodPupil()) { }
-        */
-
         Random rand = new Random();
 
         private Pupil GeneratePuple()
@@ -40,9 +31,8 @@ namespace Task_1
             {
                 case 1: return new ExcelentPupil();
                 case 2: return new GoodPupil();
-                case 3: return new BadPupil();
+                default: return new BadPupil();
             }
-            return new BadPupil();
         }
 
 
@@ -84,15 +74,5 @@ namespace Task_1
                     break;
             }
         }
-
-        /*  Another implementation of "ShowMethod"
-        public void ShowStudy()
-        {
-            foreach (Pupil p in pupils)
-            {
-                p.Study();
-            }
-        }
-        */
     }
 }
